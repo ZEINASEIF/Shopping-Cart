@@ -8,12 +8,12 @@ var totalPrice=0
 var numItems=0
 var itemTitle=""
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+
 allproducts.forEach(function(item){
     item.onclick=function(){
         totalPrice += +(item.getAttribute("price"))
         itemTitle = item.getAttribute("title")
-        div1.innerHTML+= "<i class='fas fa-arrow-right' fs-5></i>" +" " + itemTitle  +"<br>" 
+        div1.innerHTML+= " " + itemTitle +" "+ "<i class='fas fa-arrow-right'></i>"+" "+ item.getAttribute("price")+"$"+"<br>" 
         numItems++
         cartNum.innerHTML= numItems
         if (div1.innerHTML !== ""){
